@@ -1,8 +1,232 @@
-#app {
+/* #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+} */
+
+#app {
+    font-family: Open sans, sans-serif;
+}
+
+/* popup */
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup__photo {
+    max-width: 330px;
+    width: 100%;
+}
+
+.popup__body {
+    max-width: 1039px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 56px 56px 64px 56px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.popup__photo img {
+    display: block;
+}
+
+.popup__gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.popup__gallery > img {
+    border-radius: 8px;
+    margin: 0 4px 8px 4px;
+}
+
+.popup__gallery > img.active {
+    border: 1px solid #2a81dd;
+}
+
+.popup__description {
+    width: 100%;
+}
+
+.popup__title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 32px;
+    margin-bottom: 8px;
+}
+
+.popup__balance-info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.popup__point {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    color: #1c1819;
+    margin-bottom: 8px;
+}
+
+.btn {
+    background: #2a81dd;
+    box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 134px;
+    height: 36px;
+}
+
+.popup__balance {
+    padding: 8px 79px 8px 16px;
+    background: #f0fafd;
+    border-radius: 16px;
+    position: relative;
+}
+
+.popup__balance-my {
+    font-size: 14px;
+    line-height: 24px;
+    color: #888b94;
+    margin-bottom: 4px;
+}
+
+.popup__balance-point {
+    font-size: 16px;
+    line-height: 24px;
+    color: #1c1819;
+}
+
+.popup__balance-shop {
+    position: absolute;
+    top: 11px;
+    right: 16px;
+}
+
+.popup__option-title {
+    font-size: 14px;
+    line-height: 24px;
+    color: #1c1819;
+    margin-bottom: 8px;
+}
+
+.popup__option-btns {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.popup__option {
+    display: none;
+}
+
+.popup__color-lable {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px 8px 8px 8px;
+    border: 1px #e8e8e8 solid;
+    border-radius: 8px;
+    margin-right: 8px;
+    margin-bottom: 6px;
+    color: #2a81dd;
+    cursor: pointer;
+}
+
+.popup__color-lable > span {
+    user-select: none;
+}
+
+.popup__color-container {
+    width: 23px;
+    height: 24px;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+.popup__option:checked + .popup__color-lable {
+    background-color: #d6ecfb;
+    border: 1px #d6ecfb solid;
+    color: #1c1819;
+}
+
+.beige {
+    background-color: #efe8d8;
+}
+
+.blue {
+    background-color: #00458a;
+}
+
+.grey {
+    background-color: #d4d4da;
+}
+
+.popup__size-lable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 40px;
+    height: 40px;
+    border: 1px #e8e8e8 solid;
+    border-radius: 8px;
+    margin-right: 8px;
+    margin-bottom: 6px;
+    color: #2a81dd;
+    cursor: pointer;
+}
+
+.popup__option:checked + .popup__size-lable {
+    background-color: #d6ecfb;
+    border: 1px #d6ecfb solid;
+    color: #1c1819;
+}
+
+.popup__info-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1c1819;
+    margin-bottom: 4px;
+}
+
+.popup__info-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #1c1819;
+}
+
+.popup__info-text:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.popup__x {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-color: transparent;
 }
